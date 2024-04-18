@@ -1,0 +1,123 @@
+.mainclass{
+    background-color: black;
+}
+.Home1 {
+    margin-top: 50px;
+padding-top:80px;
+    font-size: 100px;
+    color: white;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes colorAnimation {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+
+.gred {
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ffcf93, #fffcbb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 100px;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+    text-align: center;
+}
+.gred21 {
+    background: linear-gradient(to right, #1a2868, #0885d8, #dd0457, #06e751);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    padding: 25px;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.b165 {
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #4CAF50; /* Green border color */
+    color: #4CAF50; /* Green text color */
+    padding-left: 15px;
+    padding-top: 10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+    border-radius: 28px;
+
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.b165::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.b165:hover::before {
+    border-color: #4CAF50; /* Green border color */
+    animation: animateBorder 1.5s infinite linear;
+}
+.b165:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+@keyframes animateBorder {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.b165:hover {
+    animation: shakeButton 0.5s ease-in-out;
+}
+@keyframes shakeButton {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.Home1 {
+    animation: fadeIn 2s ease-in-out;
+    animation: colorAnimation 10s infinite linear;
+}

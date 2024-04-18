@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all 0.3 linear;
+}
+
+.chart1{
+  margin-right: 1120px;
+  margin-top: 150PX;
+  border: 2PX solid white;
+  height: 200px;
+}
+.container1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* justify-content: center; */
+  align-items: left;
+}
+.box1 {
+  width: 1100px;
+  height: 755px;
+  /* background-color: #0a0a0aee; */
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 80px;
+  margin: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  /* box-shadow: 0 3px 5px rgba(0,0,0,0.3); */
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  /* border: 2px solid white; */
+  /* border: 4px solid rgba(0,0,0,0.6); */
+}
+.box2 {
+  width: 290px;
+  height: 240px;
+  background-color: #eaebe9;  
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 80px;
+  margin: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  /* box-shadow: 0 3px 5px rgba(0,0,0,0.3); */
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 3px 5px rgba(rgb(204, 125, 125), green, blue, alpha);
+}
+.box3 {
+  width: 660px;
+  height: 110px;
+  background-color: #22410834;
+
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 80px;
+  margin: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  /* box-shadow: 0 3px 5px rgba(0,0,0,0.3); */
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.box1 h2 {
+  font-size: 35px;
+  padding: 20px 0;
+  color: #b83939;
+}
+.box1 p {
+  font-size: 15px;
+  color: #777777;
+}
+
+.box1 button {
+  width: 140px;
+  height: 40px;
+  background-color: #e93f3f;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 40px;
+}
+.box1 button:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+.box1 ::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.box1::after {
+  width: 100%;
+  height: 100%;
+  background-color: #fbda61;
+  background-image: linear-gradient(45deg, #2e9da5 0%, #c7ddda 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  clip-path: circle(20% at 90% 50%);
+  transition: 0.2s;
+}
+
+.box1 .count {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.box1 :nth-child(1)::after {
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #2486a9 0%, #3d9970 100%);
+}
+.box1:hover::after {
+  clip-path: circle(100%);
+}
+.box1:hover h2 {
+  color: #fff;
+}
+.box1 h3 {
+  text-align: left;
+}
+.box1:hover button {
+  color: #333;
+  background-color: #fff;
+}
+.box1:hover ::before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.box4 {
+  width: 820px;
+  height: 30px;
+
+  
+  background-color:rgba(12, 2, 2, 0.563);
+  color: #fff;
+
+  border-radius: 20px;
+  padding: 20px;
+  padding-top: 40px;
+  margin: 20px;
+  /* margin-top: 40%; */
+  margin-top: -150px;
+  text-align: center;
+  letter-spacing: 1px;
+  /* box-shadow: 0 3px 5px rgba(0,0,0,0.3); */
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.box4::placeholder {
+  font-size: 25px;
+  padding: 20px ;
+  color: #fff;
+
+  text-align: center;
+}
+#submit22 {
+  width: 140px;
+  height: 50px;        
+  background-color: #43b32d;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin-top: -90px; */
+
+  border-radius: 10px;
+  margin-bottom: 120px;
+  margin-right: 60px;
+
+  
+ 
+}
+
+.box5 {
+  gap: 15px;
+    width: 1300px;
+    height: 590px;
+    background-color: #06112bc7;
+    border-radius: 20px;
+    padding: 20px;
+    /* padding-top: 80px; */
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    /* box-shadow: 0 3px 5px rgba(0,0,0,0.3); */
+    overflow: auto;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30px;
+   
+    /* border: 6px solid rgba(0,0,0,0.6); */
+  }
+  .box5 ::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .box5::after {
+    width: 100%;
+    height: 100%;
+    background-color: #fbda61;
+    background-image: linear-gradient(45deg, #3442a0 0%, #154840 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(20% at 90% 50%);
+    transition: 0.2s;
+ 
+  }
+  .box5 :nth-child(1)::after {
+    background-color: #08aeea;
+    background-image: linear-gradient(0deg, #2486a9 0%, #3d9970 100%);
+  }
+  /* .box5:hover::after {
+    clip-path: circle(100%);
+  } */
+  .box5:hover  {
+    color: #fff;
+  }
+  .H11{
+    margin-bottom: 55px;
+  }
+
+  .box4{
+    font-size: 15px;
+    padding: 20px;
+  }
+  
+  .btn11 {
+    background-image: url('1.png'); /* Replace 'path/to/your/image.png' with the actual path to your image */
+    background-size: cover; /* Adjust the image size to cover the entire button */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the button */
+    width: 100px; /* Set the width of the button */
+    height: 100px; /* Set the height of the button */
+    border: none; /* Remove the default button border */
+    border-radius: 50%; /* Create a circular shape by setting border-radius to half of the button's width/height */
+    cursor: pointer; /* Change the cursor to a hand pointer on hover */
+    /* You can add more styles to customize the appearance of the button */
+    position: relative;
+    margin-top: 500px;
+    margin-left: 90px; /* Needed for positioning the tooltip */
+    /* box-shadow:0 0 40px ; */
+  }
+ 
+  .btn11:hover::after {
+    opacity: 1;
+  }
+  .btn11:hover{
+    background-color: rgba(0, 0, 0, 0.142);
+    /* border: 2px solid rgba(255, 255, 255, 0.618); */
+  }
+ 
+  .chat-bubble {
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .user-bubble {
+    background-color: #ddf0ff;
+    align-self: flex-start;
+
+   
+  }
+  
+  .bot-bubble {
+    background-color: #c2e2c02a;
+    align-self: flex-end;
+    color:black;
+  } 
+
+.user-bubble + .user-bubble,
+.bot-bubble + .bot-bubble {
+  background-color: #e6f3ff; /* Lighter shade for consecutive user or bot messages */
+
+}
+.bot-bubble {
+  background-color: #c2e2c0;
+  align-self: flex-end;
+ 
+}
