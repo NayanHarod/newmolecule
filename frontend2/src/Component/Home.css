@@ -26,6 +26,7 @@ padding-top:80px;
     /* font-weight: bold; */
     letter-spacing: 2px;
     text-align: center;
+    
 }
 .gred21 {
     background: linear-gradient(to right, #1a2868, #0885d8, #dd0457, #06e751);
@@ -33,9 +34,10 @@ padding-top:80px;
     background-clip: text;
     color: transparent;
     font-size: 30px;
-    padding: 25px;
+    /* padding: 5px;s */
     /* font-weight: bold; */
     letter-spacing: 2px;
+    margin-top: 90px;
     text-align: center;
 }
 
@@ -43,8 +45,8 @@ padding-top:80px;
 .b165 {
     font-size: 20px;
     background-color: transparent;
-    border: 2px solid #4CAF50; /* Green border color */
-    color: #4CAF50; /* Green text color */
+    border: 2px solid #0e5c4b; /* Green border color */
+    color: #dfdceb; /* Green text color */
     padding-left: 15px;
     padding-top: 10px;
     text-align: center;
@@ -118,6 +120,24 @@ padding-top:80px;
     }
 }
 .Home1 {
+    margin-top: 160px;
+    height:200px;
     animation: fadeIn 2s ease-in-out;
     animation: colorAnimation 10s infinite linear;
 }
+
+.Home123{
+    background-color: #080808;
+    position:fixed;
+/* margin-top: -40px; */
+margin-left: 700px;
+/* margin-bottom: 1200px; */
+    width: 450px;
+    height: 450px;
+
+   
+}
+
+/* .anm{
+    position:fixed;
+} */
