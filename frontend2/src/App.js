@@ -4,6 +4,8 @@ import './App.css';
 import Response from './Component/Response';
 
 import Home from './Component/Home';
+import Second_page from './Component/page2';
+import Report_gen from './Component/page3';
 
 // import {FormData} from './Component/FormData';
 import GlassForm from './GlassForm';
@@ -22,10 +24,11 @@ function App() {
        <BrowserRouter>
       <Routes>
         <Route path='/' element = {<Home/>}/>
-        <Route path='/vAcc' element = {<VoiceAssistant/>}/>
-        {/* <Route path='/form' element = {<GlassForm />}/>
-        <Route path='/res' element={<Response/>}/>
-        <Route path='/bot' element={<ChatBot/>}/> */}
+
+        <Route path='/vAcc' element = {<Second_page/>}/>
+     
+        <Route path='/res' element={<Report_gen/>}/>
+    
      
       </Routes>
       </BrowserRouter> 
