@@ -7,23 +7,7 @@
     
 }
 
-.navbar {
- 
-    z-index: 10; /* Ensure navbar is above other content */
-    width: 100%; /* Full width */
-    border: none;
-    box-shadow: 0 5px 5px rgba(31, 14, 20, 0.589);
 
-    /* border-radius: 4px;   */
-    /* position:fixed; */
-    height: 10%;
-    top: 0;
-    /* left: 0 ; */
-    font-size: 20px;
-    margin-left: -10px;
-
-         
-}
 
 .divmain{
     overflow-y: auto; 

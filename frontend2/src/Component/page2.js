@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useHistory
-import '/home/nayan/Desktop/Molicule/frontend2/src/Component/page2.css';
+import '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/page2.css';
 import Home from './Home';
 import { Link } from 'react-router-dom';
+import NavigationBar from './NevTwo';
 
 const Second_page = () => {
     const navigate = useNavigate(); // Initialize useNavigate
@@ -26,7 +27,7 @@ const Second_page = () => {
         )}
         <div className={`divmain ${loading ? 'blur' : ''}`}>
                 <div className='divtwo'>
-                    <nav className="navbar navbar-expand-lg w-100" style={{ backgroundColor: "transparent", border: "none" }}>
+                    {/* <nav className="navbar navbar-expand-lg w-100" style={{ backgroundColor: "transparent", border: "none" }}>
                         <a className="navbar-brand" href="#" style={{ color: "yellow", fontSize: 20 }}>
                             Molecule
                         </a>
@@ -72,7 +73,8 @@ const Second_page = () => {
                                 </li>
                             </ul>
                         </div>
-                    </nav>
+                    </nav> */}
+                    <div><NavigationBar/></div>
 
                     <div className='div2.1'>
                         <div className='select-box-container'>

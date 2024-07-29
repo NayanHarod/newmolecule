@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import '/home/nayan/Desktop/Molicule/frontend2/src/Component/page3.css'
+import '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/page3.css'
 import Home from './Home'
 import { Link } from 'react-router-dom'
+import NavigationBar from './Navbar'
+
 
 const Report_gen = () => {
 
@@ -28,7 +30,7 @@ const Report_gen = () => {
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
 
-        return () => {
+        return () => {  
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
@@ -98,64 +100,9 @@ const Report_gen = () => {
                 >
 
 
-                    <nav
-                        className="navbar navbar-expand-lg w-100"
-                        style={{ backgroundColor: "transparent", border: "none" }}
-                    >
-                        <a className="navbar-brand" href="#" style={{ color: "yellow", fontSize: 20 }}>
-                            Molecule
-                        </a>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarNav"
-                            aria-controls="navbarNav"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                            style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}
-                        >
-                            <span
-                                className="navbar-toggler-icon"
-                                style={{
-                                    backgroundImage:
-                                        "url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=0 0 30 30 xmlns=http://www.w3.org/2000/svg%3E%3Cpath stroke=rgba(255, 255, 255, 0.5) stroke-width=2 stroke-linecap=round stroke-miterlimit=10 d=M4 7h22M4 15h22M4 23h22/%3E%3C/svg%3E')",
-                                }}
-                            ></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav ml-auto">
-                                <li className="nav-item active">
-                                    <Link className="nav-link" to={Home} style={{ color: "white" }}>
-                                        Home <span className="sr-only">(current)</span>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#" style={{ color: "yellow" }}>
-                                        About
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#" style={{ color: "yellow" }}>
-                                        Contact
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link"
-                                        href="#"
-                                        tabIndex="-1"
-                                        // aria-disabled="true"
-                                        style={{ color: "white" }}
-                                    >
-                                        TryMind
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+    
 
-
+                    <NavigationBar/>
 
                     {/* <h1>Report Card</h1> */}
 
