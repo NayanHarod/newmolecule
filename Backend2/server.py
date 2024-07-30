@@ -9,7 +9,7 @@ import requests
 import asyncio
 import nest_asyncio
 from flask_cors import CORS, cross_origin
-from Prediction_and_Training import pic50_prediction
+import Rdkit_img
 
 
 app = Flask(__name__)
@@ -20,7 +20,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def molecule():
     if request.method == 'POST':
 
-        output = pic50_prediction.main()
+        output = Rdkit_img.generate_molecule_image()
         response = dict()
         response['status'] = '200'
         response['result'] = output

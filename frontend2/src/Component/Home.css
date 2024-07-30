@@ -201,7 +201,8 @@
 
   .navclass{
     transition: width 2s;
-    background-color: #0c0a0aec;
+    background-color: transparent;
+    /* position:fixed; */
     
 
   }

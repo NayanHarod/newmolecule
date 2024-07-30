@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from Prediction_and_Training import utils
+import utils
 
 class MultiGRU(nn.Module):
     """ Implements a three layer GRU cell including an embedding layer

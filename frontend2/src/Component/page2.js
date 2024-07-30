@@ -3,19 +3,55 @@ import { useNavigate } from 'react-router-dom'; // Import useHistory
 import '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/page2.css';
 import Home from './Home';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; 
 import NavigationBar from './NevTwo';
 
 const Second_page = () => {
     const navigate = useNavigate(); // Initialize useNavigate
 
+    const [selectedDisease, setSelectedDisease] = useState('');
     const [loading, setLoading] = useState(false);
 
+    // Handle dropdown selection change
+    const handleSelectChange = (event) => {
+        setSelectedDisease(event.target.value);
+    };
+
+    // Handle generate button click
     const handleGenerateClick = () => {
+        if (!selectedDisease) {
+            alert('Please select a disease!');
+            return;
+        }
+
         setLoading(true);
-        setTimeout(() => {
-            navigate('/res');
+
+        // Create a promise that resolves after 30 seconds
+        const timeoutPromise = new Promise(resolve => {
+            setTimeout(resolve, 3000);
+        });
+
+        // Make the API call
+        const apiCallPromise = axios.post('http://192.168.11.236:4005/mol')
+        .then(response => {
+            console.log(response.data); // Handle your response data here
+            const data = response.data
+            return data;
+        })
+        .catch(error => {
+            console.error('There was an error!', error); // Handle error here
+            
+            throw error;
+        });
+
+    // Wait for both the API call and the timeout
+    Promise.all([apiCallPromise, timeoutPromise])
+        .then(([data]) => {
+            navigate('/res', { state: { data } }); // Pass the data to the Report_gen component
+        })
+        .finally(() => {
             setLoading(false);
-        }, 5000); // 30 seconds delay
+        });
     };
     return (
         <div className='divone'>
@@ -74,11 +110,11 @@ const Second_page = () => {
                             </ul>
                         </div>
                     </nav> */}
-                    <div><NavigationBar/></div>
+                    <NavigationBar/>
 
                     <div className='div2.1'>
                         <div className='select-box-container'>
-                            <select className='custom-select'>
+                            <select className='custom-select' value={selectedDisease} onChange={handleSelectChange}>
                                 <option value="" disabled selected>Select a disease...</option>
                                 <option value="option1">Malaria</option>
                                 <option value="option2">Alzheimer's</option>

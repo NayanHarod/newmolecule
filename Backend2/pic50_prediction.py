@@ -4,7 +4,7 @@ from rdkit.Chem import AllChem
 from rdkit import DataStructs
 import numpy as np
 import joblib
-from Prediction_and_Training import active_prediction
+import active_prediction
 
 # Function to generate ECFP6 fingerprint from SMILES
 def generate_fingerprint(smiles):

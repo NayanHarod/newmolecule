@@ -8,7 +8,7 @@ import time
 import torch
 from torch.utils.data import Dataset
 
-from Prediction_and_Training import utils
+import utils
 
 class Vocabulary(object):
     """A class for handling encoding/decoding from SMILES to an array of indices"""

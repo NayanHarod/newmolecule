@@ -1,7 +1,7 @@
 import torch
 from rdkit import Chem
-from Prediction_and_Training import model
-from Prediction_and_Training import data_structs
+import model
+import data_structs
 
 
 def load_model(checkpoint_path, vocab_path):
@@ -42,8 +42,8 @@ def generate_smiles(model, voc,filepath, num_samples=10):
 
 
 def res_fun():
-    checkpoint_path = "/home/multi-sy-22/Desktop/newmolecule/Backend2/Prediction_and_Training/Prior.ckpt"
-    vocab_path = "/home/multi-sy-22/Desktop/newmolecule/Backend2/Prediction_and_Training/Voc"
+    checkpoint_path = "/home/multi-sy-22/Desktop/newmolecule/Backend2/Prior.ckpt"
+    vocab_path = "/home/multi-sy-22/Desktop/newmolecule/Backend2/Voc"
     filepath = "/home/multi-sy-22/Desktop/newmolecule/Backend2/data/all_combined.txt"
     model, voc = load_model(checkpoint_path, vocab_path)
     num_samples = 10
@@ -51,8 +51,6 @@ def res_fun():
 
     return new_smiles
 
-result = res_fun()
-print(result)
     
     
 
