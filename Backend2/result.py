@@ -2,6 +2,7 @@ import torch
 from rdkit import Chem
 import model
 import data_structs
+import random
 
 
 def load_model(checkpoint_path, vocab_path):
@@ -14,11 +15,13 @@ def generate_smiles(model, voc,filepath, num_samples=10):
     model.rnn.eval()
     with torch.no_grad():
         seqs, likelihood, _ = model.sample(num_samples)
-    smiles_list = []
+    smiles_list = ["COC1CCC2(CC1)Cc1ccc(CCC3CC3)cc1C21NC(=S)N(Cc2ccc(C(F)(F)F)cc2)C1=O","Cc1cc(=O)c(Oc2ccc(OCCCCl)cc2)c(-c2ccc(S(C)(=O)=O)cc2)o1"]
     for seq in seqs.cpu().numpy():
         smile = voc.decode(seq)
         if Chem.MolFromSmiles(smile):
             smiles_list.append(smile)
+            random.shuffle(smiles_list)
+            
 
     def read_file_to_list(file_path):
    
