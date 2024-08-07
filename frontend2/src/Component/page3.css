@@ -74,6 +74,7 @@
     height: 50px;
     border: 2px solid white;
     border-radius: 6px;
+    text-align: center;
  
     font-size: 20px;
     overflow-x: scroll    ;
@@ -150,7 +151,7 @@
 }
 
 .info-table th {
-    background-color: #6d2929; /* Light background for header */
+    background-color:black; /* Light background for header */
 color: white;
 }
 

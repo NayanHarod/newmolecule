@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/page3.css';
 import { useLocation } from 'react-router-dom';
-// import Home from './Home';
-import { Link } from 'react-router-dom';
 import NavigationBar from './Navbar';
 
 const Report_gen = () => {
@@ -41,12 +39,24 @@ const Report_gen = () => {
         };
     }, []);
 
+    const handleVerify =  (molName) => {
+        console.log("nnnnnnnnnnnnnnnnnn");
+        try {
+             navigator.clipboard.writeText(molName);
+             console.log('tttttttttttttttttttttttttttttttttttttttt',navigator.clipboard.writeText(molName));
+            
+            // Redirect to the verification page
+            window.location.href = 'https://tox.charite.de/protox3/index.php?site=compound_input';
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+            alert('Failed to copy molecule name');
+        }
+    };
+
     return (
         <div className='divA'>
             <div className='divmain11'>
-               
-                    <NavigationBar />
-                
+                <NavigationBar />
                 <div className='divC'>
                     {result.map((item, index) => (
                         <div className='inner-div' key={index}>
@@ -64,8 +74,8 @@ const Report_gen = () => {
                                         <thead>
                                             <tr>
                                                 <th>Status :-</th>
-                                                <th style={{ color:"Green"}}> 
-                                                   Ready for testing
+                                                <th style={{ color: "Green" }}> 
+                                                    Ready for testing
                                                 </th>
                                             </tr>
                                         </thead>
@@ -75,7 +85,7 @@ const Report_gen = () => {
                                             <tr>
                                                 <th>Verify :-</th>
                                                 <th style={{ color: "blue" }}>
-                                                    <a href='https://tox.charite.de/protox3/index.php?site=compound_input'>click to Verify</a>
+                                                    <a href='https://tox.charite.de/protox3/index.php?site=compound_input'  onClick={() => handleVerify(item.mol_name)}>click to Verify</a>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -127,6 +137,7 @@ const Report_gen = () => {
                                             </li>
                                             <li
                                                 style={{ padding: '5px 10px', cursor: 'pointer', fontFamily: "-moz-initial", fontWeight: "bold", fontSize: 18 }}
+                                               
                                             >
                                                 Verify
                                             </li>

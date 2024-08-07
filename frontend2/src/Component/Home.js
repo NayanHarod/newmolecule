@@ -8,6 +8,7 @@ import ParticlesComponent from './particals';
 import NavigationBar from './Navbar'
 
 function Home() {
+  
   return (
     <>
 

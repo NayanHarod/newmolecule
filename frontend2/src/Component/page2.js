@@ -1,12 +1,24 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useHistory
 import '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/page2.css';
 import Home from './Home';
 import { Link } from 'react-router-dom';
 import axios from 'axios'; 
 import NavigationBar from './NevTwo';
+import welcomeAudio from '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/voicebooking-speech.wav'
+import welcomeAudio1 from '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/ElevenLabs_2024-08-07T07_16_36_Riya K. Rao - Hindi Conversational Voice_pvc_s31_sb75_se0_b_m2.mp3'
+import wait from '/home/multi-sy-22/Desktop/newmolecule/frontend2/src/Component/wait.mp3'
 
 const Second_page = () => {
+    useEffect(() => {
+        const audio = new Audio(welcomeAudio);
+        audio.play(
+        ).catch(error => {
+            console.error('Error playing audio:', error);
+        });
+      
+    }, []);
+ 
     const navigate = useNavigate(); // Initialize useNavigate
 
     const [selectedDisease, setSelectedDisease] = useState('');
@@ -25,6 +37,12 @@ const Second_page = () => {
         }
 
         setLoading(true);
+        const audio = new Audio(wait);
+        audio.play(
+        ).catch(error => {
+            console.error('Error playing audio:', error);
+        });
+
 
         // Create a promise that resolves after 30 seconds
         const timeoutPromise = new Promise(resolve => {
